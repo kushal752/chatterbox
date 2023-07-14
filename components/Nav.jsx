@@ -43,7 +43,7 @@ const Nav = () => {
               Create Post
             </Link>
 
-            <button onClick={signOut} className="outline_btn">
+            <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
             </button>
 
@@ -64,7 +64,7 @@ const Nav = () => {
                 <button
                   type="button"
                   key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={() => {signIn(provider.id)}}
                   className="black_btn"
                 >
                   Sign In
@@ -93,16 +93,14 @@ const Nav = () => {
                 <Link
                   href="/profile"
                   className="dropdown_link"
-                  onClick={() => setToggleDropdown
-                    (false)}
+                  onClick={() => setToggleDropdown(false)}
                 >
                   My Profile
                 </Link>
                 <Link
                   href="/create-prompt"
                   className="dropdown_link"
-                  onClick={() => setToggleDropdown
-                    (false)}
+                  onClick={() => setToggleDropdown(false)}
                 >
                   Create Prompt
                 </Link>
@@ -126,7 +124,7 @@ const Nav = () => {
                 <button
                   type="button"
                   key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={() => {signIn(provider.id)}}
                   className="black_btn"
                 >
                   Sign In

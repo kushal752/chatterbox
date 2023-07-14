@@ -24,7 +24,7 @@ const Feed = () => {
 
   const handleSearchChange = (e) => {
 
-  }
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -32,7 +32,7 @@ const Feed = () => {
       const data = await response.json();
 
       setPosts(data);
-    }
+    };
     fetchPosts();
   },[]);
 
@@ -51,11 +51,11 @@ const Feed = () => {
       </form>
 
       <PromptCardList
-        data={[posts]}
+        data={posts}
         handleTagClick={() => {}}
       />
     </section>
-  )
-}
+  );
+};
 
-export default Feed
+export default Feed;
