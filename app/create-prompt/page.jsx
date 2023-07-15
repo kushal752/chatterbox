@@ -13,7 +13,7 @@ const CreatePrompt = () => {
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: '', 
-    tag: '',
+    tag: ''
   });
 
   const createPrompt = async (e) => {
@@ -28,8 +28,8 @@ const CreatePrompt = () => {
           prompt: post.prompt,
           userId: session?.user.id,
           tag: post.tag
-        })
-      })
+        }),
+      });
 
       if(response.ok) {
         router.push('/');
@@ -39,7 +39,7 @@ const CreatePrompt = () => {
     } finally {
       setSubmitting(false);
     }
-  }
+  };
 
 
   return (
@@ -50,7 +50,7 @@ const CreatePrompt = () => {
       submitting={submitting}
       handleSubmit={createPrompt}
     />
-  )
-}
+  );
+};
 
 export default CreatePrompt;
