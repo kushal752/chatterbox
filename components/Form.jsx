@@ -32,7 +32,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag {` `}
             <span className="font-normal">
-              (#product, #webdevelopment, #idea)
+              (#product, #webdevelopment, #idea, etc.)
             </span>
           </span>
 
@@ -54,12 +54,12 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             disabled={submitting}
             className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
           >
-            {submitting ? `${type}...` : type}
+            {submitting ? `${type}ing...` : type}
           </button>
         </div>
       </form>
     </section>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

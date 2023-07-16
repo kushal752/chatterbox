@@ -10,6 +10,6 @@ export const GET = async (request, { params }) => {
 
         return new Response(JSON.stringify(prompts), { status: 200 })
     } catch (error) {
-        return new Response("Failed to fetch all prompts", { status: 500 })
+        return new Response("Failed to fetch prompts created by user", { status: 500 })
     }
  }
